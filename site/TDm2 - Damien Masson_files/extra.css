@@ -1,0 +1,573 @@
+
+:root{
+
+
+	--esiee-blue: #004682;
+	--esiee-dark-blue: #0f273b;
+	--esiee-red: #d2213c;
+	--esiee-pink: #e83583;
+	--esiee-orange: #ef7d00;
+	--esiee-yellow: #fbba00;
+	--esiee-dark-green: #00936e; /* RGB(0, 147, 110) */ 
+	--esiee-green: #92c56e;
+	--esiee-purple: #8b4a97; /* RGB(139, 74, 151) */
+	--esiee-blue-cyan: #1eafd0; /* RGB(30, 175, 208) */
+	--esiee-blue-sky: #0097d7; /* RGB(0, 151, 215) */
+
+	--eiffel-blue: #113146;	
+
+
+	--shadow-box-color: var(--md-background-color);
+/*	--central-container-max-width: 1478px; */
+
+	--top-banner-color: var(--md-primary-fg-color);
+	--second-banner-color: var(--md-primary-fg-color);
+/*
+	--h1-color:  var(--md-default-fg-color);
+	--h2-color:  var(--md-default-fg-color);
+	--h3-color:  var(--md-default-fg-color);
+	--h4-color:  var(--md-default-fg-color);
+*/
+
+}
+/*
+@font-face {
+	font-family: 'TT Norms Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('TT Norms Regular'), url('fonts/TTNorms-Regular.otf') ;
+}
+*/
+
+
+/* le milieu */
+.md-content {
+	box-shadow: 2px 2px 8px 0 var(--shadow-box-color) ;
+	margin : 10px;
+
+}
+
+/* taille du container central (menu verticaux + centre) */
+
+.md-grid {
+	max-width: var(--central-container-max-width, 1476px); /*1478*/
+/* 1440 + 2x10 (marges) + 2x8 (border shadow) */
+}
+
+
+/* la barre de titre */
+.md-header {
+/*	--md-primary-fg-color:     var(--top-banner-color);*/
+	background-image: url("../img/eiffel-bg-top.jpg");
+	height: 61px;
+}
+
+/* le menu horiz */
+.md-tabs {
+/*	--md-primary-fg-color:      var(--second-banner-color);*/
+	background-image: url("../img/eiffel-bg-bottom.jpg");
+	height: 61px;
+	font-weight: bold;
+}
+
+/* le footer */
+/* => si besoin plus tard...
+.md-footer {
+  --md-footer-bg-color:               #bd1112;
+  --md-footer-bg-color--dark:               #323232;
+}
+
+.md-footer-meta{
+  --md-footer-bg-color:               #bd1112;
+}
+*/
+
+
+/* taille du logo : ne marche pas sous chrome */
+.md-header__button.md-logo :is(img, svg) {
+  fill: currentcolor;
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+
+
+.md-content h1{
+	color: var(--h1-color);
+       	opacity: 0.6;	
+}
+.md-content h2{
+	color: var(--h2-color);
+}
+.md-content h3{
+	color: var(--h3-color);
+}
+.md-content h4{
+	color: var(--h4-color);
+}
+
+
+.md-content ul{
+
+	list-style-image: url("../img/arrow-right-6.png");	
+
+}
+
+
+[data-md-color-scheme="esiee"] {
+
+	--shadow-box-color: var(--esiee-blue);
+	/*	--central-container-max-width: 1800px; */
+
+
+	--h1-color:  var(--esiee-blue);
+	--h2-color:  var(--esiee-blue);
+	--h3-color:  var(--esiee-red);
+	--h4-color:  var(--esiee-blue);
+
+
+
+	--top-banner-color: var(--esiee-blue);
+	--second-banner-color: var(--esiee-pink);
+
+	--md-primary-fg-color:       	var(--esiee-blue); /* couleur de fond du bandeau supérieur */ 
+	--md-primary-fg-color--light: 	var(--esiee-pink); /* => ??? */
+	--md-primary-fg-color--dark:    var(--esiee-pink); /* couleur de fond du bandeau git dans ecran smartphone */
+
+	/*	--md-primary-bg-color:          white;*/ /* couleur des texte dans les bandeaux titre */
+	/*	--md-primary-bg-color--light:   white;*/ /* couleur du texte dans le champs recherche */
+
+	--md-typeset-a-color:  		var(--esiee-pink); /* couleur des liens dans partie centrale + couleur liens actif dans menus */
+	--md-typeset-color:  		var(--esiee-dark-blue); /* couleur du texte principal */
+
+	--md-footer-bg-color:            var(--esiee-blue); /* couleur footer avec liens */
+	--md-footer-bg-color--dark:      var(--esiee-dark-blue); /* couleur footer avec copyright */
+
+
+	/*	--md-default-bg-color: white; *//*fond*/
+	/*	--md-default-fg-color: white; *//* ??? */ 
+
+
+
+	--md-accent-fg-color: var(--esiee-red); /*couleur lien survolé */
+	/*	--md-accent-fg-color--light: yellow;   *//* ??? */
+	/*	--md-accent-fg-color--dark: yellow;   */ /* ??? */
+
+	/*--md-text-font: 'TT Norms Regular';*/ 
+}
+
+[data-md-color-scheme="esiee-large"] {
+
+	--shadow-box-color: white;
+	--central-container-max-width: 100%; 
+
+	
+	--h1-color:  var(--esiee-blue);
+	--h2-color:  var(--esiee-blue);
+	--h3-color:  var(--esiee-red);
+	--h4-color:  var(--esiee-blue);
+	
+
+
+	--top-banner-color: var(--esiee-blue);
+	--second-banner-color: var(--esiee-pink);
+
+	--md-primary-fg-color:       	var(--esiee-blue); /* couleur de fond du bandeau supérieur */ 
+	--md-primary-fg-color--light: 	var(--esiee-pink); /* => ??? */
+	--md-primary-fg-color--dark:    var(--esiee-pink); /* couleur de fond du bandeau git dans ecran smartphone */
+
+/*	--md-primary-bg-color:          white;*/ /* couleur des texte dans les bandeaux titre */
+/*	--md-primary-bg-color--light:   white;*/ /* couleur du texte dans le champs recherche */
+
+	--md-typeset-a-color:  		var(--esiee-pink); /* couleur des liens dans partie centrale + couleur liens actif dans menus */
+	--md-typeset-color:  		var(--esiee-dark-blue); /* couleur du texte principal */
+
+	--md-footer-bg-color:            var(--esiee-blue); /* couleur footer avec liens */
+	--md-footer-bg-color--dark:      var(--esiee-dark-blue); /* couleur footer avec copyright */
+
+
+/*	--md-default-bg-color: white; *//*fond*/
+/*	--md-default-fg-color: white; *//* ??? */ 
+
+
+
+	--md-accent-fg-color: var(--esiee-red); /*couleur lien survolé */
+/*	--md-accent-fg-color--light: yellow;   *//* ??? */
+/*	--md-accent-fg-color--dark: yellow;   */ /* ??? */
+
+	/* --md-text-font: 'TT Norms Regular';*/ 
+}
+
+[data-md-color-scheme="esiee-dark"] {
+
+	--md-hue: 232;
+
+
+
+	--h1-color:  var(--esiee-red);
+	--h2-color:  var(--esiee-red);
+	--h3-color:  var(--esiee-blue);
+	--h4-color:  var(--esiee-red);
+
+
+	--shadow-box-color: black;
+/*	--central-container-max-width: 1800px; */
+	
+	--top-banner-color:  hsla(var(--md-hue), 15%, 10%, 1);
+	--second-banner-color:  hsla(var(--md-hue), 15%, 10%, 0.6); /*var(--esiee-dark-blue);*/
+
+	--md-primary-fg-color:       	var(--esiee-dark-blue);*/ /* couleur de fond du bandeau supérieur */ 
+	--md-primary-fg-color--light: 	var(--esiee-pink); /* => ??? */
+	--md-primary-fg-color--dark:    var(--esiee-dark-blue);*/ /* couleur de fond du bandeau git dans ecran smartphone */
+
+	--md-primary-bg-color:          white; /* couleur des texte dans les bandeaux titre */
+	--md-primary-bg-color--light:   white; /* couleur du texte dans le champs recherche */
+
+
+
+
+	--md-typeset-a-color:  		var(--esiee-pink); /* couleur des liens dans partie centrale + couleur liens actif dans menus */
+	--md-typeset-color:  		rgba(255,255,255,0.8); /* couleur du texte principal */
+
+/* ?? */	--md-footer-bg-color:           var(--esiee-pink); /* couleur footer avec liens  ? */
+	--md-footer-bg-color--dark:     black; /* couleur footer avec copyright */
+
+
+	--md-default-bg-color: var(--esiee-dark-blue); /*fond*/
+	--md-default-fg-color: white; /* ??? */ 
+	--md-default-fg-color--lightest:    var(--esiee-drak-blue); /* couleur fond petit ecran sous menu */
+	--md-default-fg-color--light:    #FFFFFF; /* texte associé */
+
+
+	--md-accent-fg-color: var(--esiee-red); /*couleur lien survolé */
+	--md-accent-fg-color--light: yellow;   /* ??? */
+	--md-accent-fg-color--dark: yellow;    /* ??? */
+
+	/* --md-text-font: 'TT Norms Regular'; */
+
+ 
+
+
+    --md-default-fg-color:             hsla(var(--md-hue), 75%, 95%, 1);
+    --md-default-fg-color--light:      hsla(var(--md-hue), 75%, 90%, 0.62);
+    --md-default-fg-color--lighter:    hsla(var(--md-hue), 75%, 90%, 0.32);
+    --md-default-fg-color--lightest:   hsla(var(--md-hue), 75%, 90%, 0.12);
+/*    --md-default-bg-color:             hsla(var(--md-hue), 15%, 21%, 1);*/
+    --md-default-bg-color--light:      hsla(var(--md-hue), 15%, 21%, 0.54);
+    --md-default-bg-color--lighter:    hsla(var(--md-hue), 15%, 21%, 0.26);
+    --md-default-bg-color--lightest:   hsla(var(--md-hue), 15%, 21%, 0.07);
+
+    --md-code-fg-color:                hsla(var(--md-hue), 18%, 86%, 1);
+    --md-code-bg-color:                hsla(var(--md-hue), 15%, 15%, 1);
+
+    --md-code-hl-color:                hsla(#{hex2hsl($clr-blue-a200)}, 0.15);
+    --md-code-hl-number-color:         hsla(6, 74%, 63%, 1);
+    --md-code-hl-special-color:        hsla(340, 83%, 66%, 1);
+    --md-code-hl-function-color:       hsla(291, 57%, 65%, 1);
+    --md-code-hl-constant-color:       hsla(250, 62%, 70%, 1);
+    --md-code-hl-keyword-color:        hsla(219, 66%, 64%, 1);
+    --md-code-hl-string-color:         hsla(150, 58%, 44%, 1);
+    --md-code-hl-name-color:           var(--md-code-fg-color);
+    --md-code-hl-operator-color:       var(--md-default-fg-color--light);
+    --md-code-hl-punctuation-color:    var(--md-default-fg-color--light);
+    --md-code-hl-comment-color:        var(--md-default-fg-color--light);
+    --md-code-hl-generic-color:        var(--md-default-fg-color--light);
+    --md-code-hl-variable-color:       var(--md-default-fg-color--light);
+
+
+    --md-typeset-mark-color:           hsla(#{hex2hsl($clr-blue-a200)}, 0.3);
+
+    --md-typeset-kbd-color:            hsla(var(--md-hue), 15%, 94%, 0.12);
+    --md-typeset-kbd-accent-color:     hsla(var(--md-hue), 15%, 94%, 0.2);
+    --md-typeset-kbd-border-color:     hsla(var(--md-hue), 15%, 14%, 1);
+
+    --md-typeset-table-color:          hsla(var(--md-hue), 75%, 95%, 0.12);
+
+    --md-admonition-fg-color:          var(--md-default-fg-color);
+    --md-admonition-bg-color:          var(--md-default-bg-color);
+
+    --md-footer-bg-color:              hsla(var(--md-hue), 15%, 12%, 0.87);
+    --md-footer-bg-color--dark:        hsla(var(--md-hue), 15%, 10%, 1);
+
+    --md-shadow-z1:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.2),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.1);
+
+    --md-shadow-z2:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.3),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.25);
+
+    --md-shadow-z3:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.4),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.35);
+
+    img[src$="#only-light"],
+    img[src$="#gh-light-mode-only"] {
+      display: none;
+    }
+
+    img[src$="#only-dark"],
+    img[src$="#gh-dark-mode-only"] {
+      display: initial;
+    }
+
+
+}
+
+
+[data-md-color-scheme="esiee-dark-large"] {
+
+	--md-hue: 232;
+
+
+	--h1-color:  var(--esiee-red);
+	--h2-color:  var(--esiee-red);
+	--h3-color:  var(--esiee-blue);
+	--h4-color:  var(--esiee-red);
+
+
+	--central-container-max-width: 100%; 
+	--shadow-box-color: var(--esiee-dark-blue);
+	
+	--top-banner-color:  hsla(var(--md-hue), 15%, 10%, 1);
+	--second-banner-color:  hsla(var(--md-hue), 15%, 10%, 0.6); /*var(--esiee-dark-blue);*/
+
+	--md-primary-fg-color:       	var(--esiee-dark-blue);*/ /* couleur de fond du bandeau supérieur */ 
+	--md-primary-fg-color--light: 	var(--esiee-pink); /* => ??? */
+	--md-primary-fg-color--dark:    var(--esiee-dark-blue);*/ /* couleur de fond du bandeau git dans ecran smartphone */
+
+	--md-primary-bg-color:          white; /* couleur des texte dans les bandeaux titre */
+	--md-primary-bg-color--light:   white; /* couleur du texte dans le champs recherche */
+
+
+	--md-typeset-a-color:  		var(--esiee-pink); /* couleur des liens dans partie centrale + couleur liens actif dans menus */
+	--md-typeset-color:  		rgba(255,255,255,0.8); /* couleur du texte principal */
+
+	--md-footer-bg-color:            var(--esiee-dark-blue); /* couleur footer avec liens */
+	--md-footer-bg-color--dark:      black; /* couleur footer avec copyright */
+
+
+	--md-default-bg-color: var(--esiee-dark-blue); /*fond*/
+	--md-default-fg-color: white; /* ??? */ 
+	--md-default-fg-color--lightest:    var(--esiee-drak-blue); /* couleur fond petit ecran sous menu */
+	--md-default-fg-color--light:    #FFFFFF; /* texte associé */
+
+
+	--md-accent-fg-color: var(--esiee-red); /*couleur lien survolé */
+	--md-accent-fg-color--light: yellow;   /* ??? */
+	--md-accent-fg-color--dark: yellow;    /* ??? */
+
+	 /*--md-text-font: 'TT Norms Regular';*/ 
+
+ 
+
+
+    --md-default-fg-color:             hsla(var(--md-hue), 75%, 95%, 1);
+    --md-default-fg-color--light:      hsla(var(--md-hue), 75%, 90%, 0.62);
+    --md-default-fg-color--lighter:    hsla(var(--md-hue), 75%, 90%, 0.32);
+    --md-default-fg-color--lightest:   hsla(var(--md-hue), 75%, 90%, 0.12);
+/*    --md-default-bg-color:             hsla(var(--md-hue), 15%, 21%, 1);*/
+    --md-default-bg-color--light:      hsla(var(--md-hue), 15%, 21%, 0.54);
+    --md-default-bg-color--lighter:    hsla(var(--md-hue), 15%, 21%, 0.26);
+    --md-default-bg-color--lightest:   hsla(var(--md-hue), 15%, 21%, 0.07);
+
+    --md-code-fg-color:                hsla(var(--md-hue), 18%, 86%, 1);
+    --md-code-bg-color:                hsla(var(--md-hue), 15%, 15%, 1);
+
+    --md-code-hl-color:                hsla(#{hex2hsl($clr-blue-a200)}, 0.15);
+    --md-code-hl-number-color:         hsla(6, 74%, 63%, 1);
+    --md-code-hl-special-color:        hsla(340, 83%, 66%, 1);
+    --md-code-hl-function-color:       hsla(291, 57%, 65%, 1);
+    --md-code-hl-constant-color:       hsla(250, 62%, 70%, 1);
+    --md-code-hl-keyword-color:        hsla(219, 66%, 64%, 1);
+    --md-code-hl-string-color:         hsla(150, 58%, 44%, 1);
+    --md-code-hl-name-color:           var(--md-code-fg-color);
+    --md-code-hl-operator-color:       var(--md-default-fg-color--light);
+    --md-code-hl-punctuation-color:    var(--md-default-fg-color--light);
+    --md-code-hl-comment-color:        var(--md-default-fg-color--light);
+    --md-code-hl-generic-color:        var(--md-default-fg-color--light);
+    --md-code-hl-variable-color:       var(--md-default-fg-color--light);
+
+
+    --md-typeset-mark-color:           hsla(#{hex2hsl($clr-blue-a200)}, 0.3);
+
+    --md-typeset-kbd-color:            hsla(var(--md-hue), 15%, 94%, 0.12);
+    --md-typeset-kbd-accent-color:     hsla(var(--md-hue), 15%, 94%, 0.2);
+    --md-typeset-kbd-border-color:     hsla(var(--md-hue), 15%, 14%, 1);
+
+    --md-typeset-table-color:          hsla(var(--md-hue), 75%, 95%, 0.12);
+
+    --md-admonition-fg-color:          var(--md-default-fg-color);
+    --md-admonition-bg-color:          var(--md-default-bg-color);
+
+    --md-footer-bg-color:              hsla(var(--md-hue), 15%, 12%, 0.87);
+    --md-footer-bg-color--dark:        hsla(var(--md-hue), 15%, 10%, 1);
+
+    --md-shadow-z1:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.2),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.1);
+
+    --md-shadow-z2:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.3),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.25);
+
+    --md-shadow-z3:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.4),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.35);
+
+    img[src$="#only-light"],
+    img[src$="#gh-light-mode-only"] {
+      display: none;
+    }
+
+    img[src$="#only-dark"],
+    img[src$="#gh-dark-mode-only"] {
+      display: initial;
+    }
+
+
+}
+
+	 /* le menu pop up sur petit ecran ? 
+	 .md-nav {
+		 --md-primary-fg-color:     var(--esiee-dark-blue);
+		 --md-default-fg-color--lightest:    var(--esiee-blue);
+		 --md-default-fg-color--light:    #FFFFFF;
+	 }
+	 .md-nav--primary {
+		 /*  background-color:     var(--esiee-blue); 
+		 /*  --md-primary-fg-color:     var(--esiee-dark-blue);
+		 /*  --md-default-fg-color--light:    var(--esiee-dark-blue);
+	 }
+
+
+	 .md-nav__item { /* enleve les separations 
+		 --md-default-fg-color--lightest:    #FFFFFF;
+	 }	
+
+	 .md-nav__source { /* bandeau git 
+		 background-color:     var(--esiee-blue); 
+	 }
+
+	 /* les cotés 
+	 .md-sidebar {
+	 }
+	 */
+
+
+
+
+
+/* couleur admonition Info ==> ESIEE... */
+
+/*
+.md-typeset .admonition,
+.md-typeset details{
+	border-style : none;	
+	box-shadow: 0 4px 8px 0 var(--shadow-box-color) ; 
+}
+*/
+
+
+/********************** Info Box *********************************/
+
+.md-typeset .admonition.info,
+.md-typeset details.info {
+	border-style : none;	
+	box-shadow: 2px 2px 4px 0px var(--shadow-box-color) ;
+	border-left:5px solid var(--esiee-blue-sky);
+  
+}
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary {
+  background-color:  rgba(0,151,215,0.1); 
+}
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before {
+  background-color: rgb(0,151,215);
+  -webkit-mask-image: var(--md-admonition-icon--info);
+          mask-image: var(--md-admonition-icon--info);
+}
+
+/**************************************************************/
+
+
+
+/********************** Danger Box *********************************/
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+	border-style : none;	
+	box-shadow: 2px 2px 4px 0px var(--shadow-box-color) ;
+	border-left:5px solid var(--esiee-red);
+  
+}
+.md-typeset .danger > .admonition-title,
+.md-typeset .danger > summary .not(h1){
+  background-color:  var(--esiee-red);
+  opacity : 0.1;
+}
+.md-typeset .danger > .admonition-title::before,
+.md-typeset .danger > summary::before {
+  background-color: var(--esiee-red);
+  -webkit-mask-image: var(--md-admonition-icon--danger);
+          mask-image: var(--md-admonition-icon--danger);
+}
+
+/**************************************************************/
+
+/********************** Tip Box *********************************/
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+	border-style : none;	
+	box-shadow: 2px 2px 4px 0px var(--shadow-box-color) ;
+	border-left:5px solid var(--esiee-green);
+  
+}
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary .not(h1){
+  background-color:  var(--esiee-green);
+  opacity : 0.1;
+}
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before {
+  background-color: var(--esiee-green);
+  -webkit-mask-image: var(--md-admonition-icon--tip);
+          mask-image: var(--md-admonition-icon--tip);
+}
+
+/**************************************************************/
+
+
+/********************* FILE CODE BOX **************************/
+:root {
+  --md-admonition-icon--file-code: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M162.1 257.8c-7.812-7.812-20.47-7.812-28.28 0l-48 48c-7.812 7.812-7.812 20.5 0 28.31l48 48C137.8 386.1 142.9 388 148 388s10.23-1.938 14.14-5.844c7.812-7.812 7.812-20.5 0-28.31L128.3 320l33.86-33.84c6.94-7.86 6.94-20.46-.06-28.36zM365.3 93.38l-74.63-74.64C278.6 6.742 262.3 0 245.4 0H64C28.65 0 0 28.65 0 64l.006 384c0 35.34 28.65 64 64 64H320c35.2 0 64-28.8 64-64V138.6c0-16.9-6.7-33.2-18.7-45.22zM336 448c0 8.836-7.164 16-16 16H64.02c-8.838 0-16-7.164-16-16L48 64.13c0-8.836 7.164-16 16-16h160V128c0 17.67 14.33 32 32 32h79.1v288zM221.9 257.8c-7.812 7.812-7.812 20.5 0 28.31L255.7 320l-33.86 33.84c-7.812 7.812-7.812 20.5 0 28.31C225.8 386.1 230.9 388 236 388s10.23-1.938 14.14-5.844l48-48c7.812-7.812 7.812-20.5 0-28.31l-48-48C242.3 250 229.7 250 221.9 257.8z"/></svg>')
+}
+
+.md-typeset .admonition.file-code,
+.md-typeset details.file-code {
+	border-style : none;	
+	box-shadow: 2px 2px 4px 0px var(--shadow-box-color) ;
+	border-left:5px solid var(--esiee-dark-green);
+  
+}
+.md-typeset .file-code > .admonition-title,
+.md-typeset .file-code > summary .not(h1){
+  background-color:  var(--esiee-dark-green);
+  opacity : 0.1;
+}
+.md-typeset .file-code > .admonition-title::before,
+.md-typeset .file-code > summary::before {
+  background-color: var(--esiee-dark-green);
+  -webkit-mask-image: var(--md-admonition-icon--file-code);
+          mask-image: var(--md-admonition-icon--file-code);
+}
+
+/**************************************************************/
+
+
+
+
+

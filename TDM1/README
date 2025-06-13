@@ -1,0 +1,9 @@
+
+
+https://perso.esiee.fr/~massond/dajam/units/4I-SI4
+
+
+// gcc -c -Wall -ansi -pedantic test.c
+// gcc -c -Wall -ansi -pedantic lib.c
+// gcc test.o lib.o -o a.exe
+// 

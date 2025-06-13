@@ -1,0 +1,55 @@
+Exercice 1
+Qu'est ce qu'un fichier mappé en mémoire ? à quoi est ce que cela sert ?
+
+Les fichiers mappés en mémoire sont accessibles via le gestionnaire de mémoire 
+du système d'exploitation. Le fichier est alors automatiquement partitionné en 
+un nombre de pages et consulté en fonction des besoins.
+
+Qu'est ce qu'un sémaphore ? A quoi est-ce que cela sert ? Comment l'invoque t'on ?
+
+Un sémaphore est un mécanisme de synchronisation utilisé en programmation concurrente pour :
+
+Contrôler l'accès aux ressources partagées
+Gérer la synchronisation entre threads/processus
+Un sémaphore contient un compteur entier qui peut être manipulé par deux opérations atomiques :
+
+P() (aussi appelé wait/acquire) : décrémente le compteur. Si compteur < 0, le thread est bloqué
+V() (aussi appelé post/release) : incrémente le compteur et débloque un thread en attente si nécessaire
+Types de sémaphores :
+
+Sémaphore binaire (mutex) : compteur vaut 0 ou 1
+Sémaphore général : compteur peut avoir n'importe quelle valeur positive
+
+exemple :
+
+#include <semaphore.h>
+
+// Déclaration
+sem_t semaphore;
+
+// Initialisation
+sem_init(&semaphore, 0, valeur_initiale);  // 0 pour partage entre threads
+                                           // valeur_initiale ≥ 0
+
+// Opérations
+sem_wait(&semaphore);    // P() - décrémente
+sem_post(&semaphore);    // V() - incrémente
+sem_getvalue(&semaphore, &valeur);  // Obtenir valeur actuelle
+
+// Destruction
+sem_destroy(&semaphore);
+
+Producteur / Consommateur : Qu'est ce que c'est ?
+
+Producteur : Il va produire les donnees.
+Consommateur : Il va recevoir les donnees.
+
+les commandes liées aux sémaphores : sem_wait() et sem_post()
+la création d'un sémaphore : sem_open()
+le type sem_t
+shm_open() : création d'un objet mémoire partagé
+mmap() : mapping mémoire d'un fichier (ou d'un objet mémoire)
+shm_unlink() et sem_unlink() : petit nettoyage après utilisation
+
+Un semaphore suffit.
+

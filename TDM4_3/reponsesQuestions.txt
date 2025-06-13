@@ -1,0 +1,26 @@
+I. B. 
+Le programme utilise des sémaphores pour une section 
+critique (accès au buffer) alors qu'un mutex serait 
+plus approprié. Les sémaphores sont plutôt destinés à 
+la synchronisation et le contrôle de flux, alors que les mutex sont 
+spécifiquement conçus pour protéger une ressource partagée.
+
+Solution :
+Structure de données :
+- Un mutex pour protéger le buffer partagé
+- Deux sémaphores pour la synchronisation producteur/consommateur
+- Un buffer partagé
+- Un flag pour indiquer la fin du transfert
+
+C.
+Le problème avec la solution précédente est qu'elle utilise 
+3 sémaphores (empty, full et mutex) 
+ce qui est redondant et complexifie inutilement la synchronisation.
+
+II. A.
+Il faut 3 semaphores comme cette exemple :
+for(j = 0; j < 10; j++) {
+    sem_wait(&sem1);
+    printf("Affichage %d du thread 1\n", j+1);
+    sem_post(&sem2);
+}

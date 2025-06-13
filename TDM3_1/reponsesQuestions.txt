@@ -1,0 +1,8 @@
+I. 1.
+Queue : Communication entre threads dans un meme processus sur une machine
+Pipes : Communication entre processus différents sur une machine
+Sockets : Communication entre plusieurs machines
+
+I. 2.
+Pipes
+

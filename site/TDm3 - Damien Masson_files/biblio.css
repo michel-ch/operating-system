@@ -1,0 +1,57 @@
+
+/* classe css de la page*/
+#res_script{
+	border:0;
+/*	background-color:white;*/
+/*	color:black;*/
+}
+
+/*Titre*/
+div.ZoneTitreResultat
+{
+	display:none;
+}
+/* classes pour les rubriques pour certains type de classement (type de publi, année de publi) */ 
+.Rubrique{
+	border-bottom: 2px solid #58529f;
+}
+
+/*nom du champ*/
+.ChampRes {
+	display:none;
+}
+
+/* classe commune à tous les champs affichés */ 
+dd.ValeurRes {
+/*	color:black;*/
+	margin: 0; /* haut | droit | bas | gauche */
+	  margin-top: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;
+}
+/* classe pour les titres */ 
+.Titre, .Titre a {
+   font-weight:bold;
+/*	color:#58529F;*/
+}
+/* classe pour les auteurs */ 
+.Auteurs {
+}
+/* classe des détails de publication : une calsse par type */ 
+.detail_revue,.detail_conf,.detail_cours,.detail_ouv,.detail_hdr,.detail_these,.detail_autre,.detail_brevet,.detail_rapport,.detail_sans_ref{
+}
+/* classe pour les résumés */ 
+.Debut_du_resume{
+}
+/* classe pour les doi */ 
+.DOI{
+}
+/* classe pour les identifiants */ 
+.Identifiant{
+}
+.NoticeRes {
+	border-bottom: 0px;
+}
+.NoticeResAvecVignette {
+	border-bottom: 0px;
+}
