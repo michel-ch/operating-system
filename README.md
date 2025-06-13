@@ -1,6 +1,6 @@
 # operating-system
 
-Related courses :
+Related courses ( to run execute on local machine to see ) :
 
 1. ``TDM1``: [TDM1](https://github.com/michel-ch/operating-system/blob/main/site/TDm1%20-%20Damien%20Masson.html)
 2. ``TDM2``: [TDM2](https://github.com/michel-ch/operating-system/blob/main/site/TDm2%20-%20Damien%20Masson.html)
